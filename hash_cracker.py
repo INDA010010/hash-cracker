@@ -11,7 +11,7 @@ guesses = 1
 start = time.time()
 print(Fore.YELLOW + "Starts Cracking..." + Style.RESET_ALL)
 if args.wordlist and not args.bruteforce:
-    with open(args.wordlist, "r") as wordlist:
+    with open(args.wordlist, "r", encoding="utf-8") as wordlist:
         wordlist = wordlist.read().split("\n")
     hash = args.hash
     for i in wordlist:
